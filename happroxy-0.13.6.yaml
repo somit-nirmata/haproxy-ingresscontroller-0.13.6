@@ -226,6 +226,7 @@ spec:
         - --default-backend-service=$(POD_NAMESPACE)/ingress-default-backend
         - --default-ssl-certificate=$(POD_NAMESPACE)/tls-secret
         - --configmap=$(POD_NAMESPACE)/haproxy-configmap
+        - --watch-ingress-without-class
         ports:
         - name: http
           containerPort: 80
